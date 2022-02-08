@@ -1,5 +1,7 @@
 package com.reactnativebcsdk;
 
+import android.os.Build;
+
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Promise;
