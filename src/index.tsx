@@ -20,3 +20,7 @@ const BcSdk = NativeModules.BcSdk
 export function multiply(a: number, b: number): Promise<number> {
   return BcSdk.multiply(a, b);
 }
+
+export function getVersion(): string {
+  return BcSdk.getVersion();
+}

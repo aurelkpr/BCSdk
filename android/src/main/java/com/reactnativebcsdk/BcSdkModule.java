@@ -30,5 +30,16 @@ public class BcSdkModule extends ReactContextBaseJavaModule {
         promise.resolve(a * b);
     }
 
+    @ReactMethod
+    public String getVersion() {
+        return getAndroidVersion();
+    }
+
     public static native int nativeMultiply(int a, int b);
+
+    public String getAndroidVersion() {
+        String release = Build.VERSION.RELEASE;
+        int sdkVersion = Build.VERSION.SDK_INT;
+        return "Android SDK: " + sdkVersion + " (" + release +")";
+    }
 }
